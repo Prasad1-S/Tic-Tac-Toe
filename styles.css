@@ -1,0 +1,94 @@
+html,body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Bitcount Prop Single", system-ui;
+    flex-direction: column;
+    background-color: black;
+    color: whitesmoke;
+}
+.layout-box{
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.cross,
+.circle {
+  animation: popIn 0.3s ease;
+  display: inline-block;
+}
+.refresh{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.reff{
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.ref{
+    font-size: 20px!important;
+    padding: 5px;
+    border: 2px outset #892CDC;
+    border-radius: 10px;
+    font-weight: 550;
+    color: #BC6FF1;
+}
+
+.cross{
+    font-size: 100px!important;
+    color: #14FFEC;
+}
+.circle{
+    font-size: 90px!important;
+    color: #FF4D00;
+}
+.h1{
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: #BC6FF1;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.ref.clicked{
+    transform: scale(0.9);
+    border: 2px inset #892CDC;
+}
+.cells{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    border: solid #BC6FF1;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.c0{border-width: 0px 4px 4px 0px;}
+.c1{border-width: 0px 4px 4px 4px;}
+.c2{border-width: 0px 0px 4px 4px;}
+.c3{border-width: 4px 4px 4px 0px;}
+.c4{border-width: 4px;}
+.c5{border-width: 4px 0px 4px 4px;}
+.c6{border-width: 4px 4px 0px 0px;}
+.c7{border-width: 4px 4px 0px 4px;}
+.c8{border-width: 4px 0px 0px 4px;}
