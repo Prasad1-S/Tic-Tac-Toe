@@ -26,23 +26,16 @@ $(".cells").click(function(){
 });
 $(".cells").click(function(){
    let winner = checkWinner();
-   if(winner !=null){
-    if(winner == "X"){
-        $(".h1").html(`X wins!`);
-        $(".h1").css("color","#14FFEC");
-    }else{
-        $(".h1").html(`O wins!`);
-        $(".h1").css("color","#FF4D00");
-    }}else if( boardStatus() && winner==null){
-        $(".h1").html(`It's a Draw!`);
-        $(".h1").css("color","#FFD65A");
+if (winner != null) {
+    if (winner == "X") {
+        setH1Style("#14FFEC", "X wins!");
+    } else {
+        setH1Style("#FF4D00", "O wins!");
     }
-    $(".h1").addClass("h1 row");
-    // $(".h1").css("font-size","50px");
-    $(".h1").css("font-weight","700");
-    // $(".h1").css("margin-bottom","33px");
-    // $(".h1").css("margin-top","34px");
-   
+} else if (boardStatus() && winner == null) {
+    setH1Style("#FFD65A", "It's a Draw!");
+}
+
 });
 
 function boardStatus(){
@@ -53,6 +46,19 @@ function boardStatus(){
     }
     return true;
 }
+
+function setH1Style(color, text) {
+    $(".h1").html(text);
+    $(".h1").css({
+        "font-size": "50px",
+        "font-weight": "700",
+        "margin-bottom": "33px",
+        "margin-top": "34px",
+        "color": color,
+        "text-align": "center",
+    });
+}
+
 
 $(".ref").click(function (){
     $(".ref").addClass("clicked");
