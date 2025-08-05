@@ -38,10 +38,10 @@ $(".cells").click(function(){
         $(".h1").css("color","#FFD65A");
     }
     $(".h1").addClass("h1 row");
-    $(".h1").css("font-size","50px");
+    // $(".h1").css("font-size","50px");
     $(".h1").css("font-weight","700");
-    $(".h1").css("margin-bottom","33px");
-    $(".h1").css("margin-top","34px");
+    // $(".h1").css("margin-bottom","33px");
+    // $(".h1").css("margin-top","34px");
    
 });
 
